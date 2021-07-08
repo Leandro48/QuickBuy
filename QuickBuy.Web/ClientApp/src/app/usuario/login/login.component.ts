@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Usuario } from "../../modelo/usuario";
 
 @Component({
   selector: "app-login",
@@ -6,6 +7,15 @@ import { Component } from "@angular/core";
   styleUrls:["./login.component.css"]
 })
 export class LoginComponent {
-  public email = "leo@teste.com";
-  public senha = "abc123";
+  public usuario;
+
+  constructor() {
+    this.usuario = new Usuario();
+  }
+
+  entrar() {
+    if (this.usuario.email == "leo@teste.com" && this.usuario.senha == "abc123") {
+      
+    }
+  }
 }
